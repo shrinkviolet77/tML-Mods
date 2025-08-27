@@ -358,7 +358,7 @@ Buffs: {
 
 	ElectrifiedEnemy2: {
 		DisplayName: 过载电击
-		Description: 敌人被过载的电流能量所困扰，持续受到伤害The enemy is overloaded with galvanic energy and taking constant damage
+		Description: 敌人被过载的电流能量所困扰，持续受到伤害
 	}
 
 	ManaStim5: {
@@ -396,4 +396,5 @@ Projectiles: {
 	ClimaxDeathray.DisplayName: 终⊙焉催化剂
 	ClimaxBeam.DisplayName: 终⊙焉催化剂
 }
+
 
