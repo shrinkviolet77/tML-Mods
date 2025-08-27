@@ -54,6 +54,7 @@ Items: {
 			'''
 			增加 18% 伤害
 			增加 4% 暴击率
+			增加 10% 投掷物速度
 			'现在这是巧匠的盔甲'
 			'''
 	}
@@ -161,6 +162,7 @@ Items: {
 			'''
 			增加 40 最大魔力值
 			增加 8% 伤害和暴击率
+			增加 10% 投掷物速度
 			增加 15% 移动速度
 			'释放星体的真正伟力'
 			'''
@@ -227,7 +229,7 @@ Items: {
 	}
 
 	ParagonHeadpiece: {
-		DisplayName: 无暇头盔
+		DisplayName: 无瑕头盔
 		Tooltip:
 			'''
 			增加 20 最大魔力值
@@ -235,6 +237,7 @@ Items: {
 			增加 14% 暴击率
 			减少 5% 魔力消耗
 			5% 的几率不消耗弹药
+			增加 5% 投掷物速度
 			增加 1 召唤栏
 			改善视力并在佩戴时提供大量光照
 			'巧匠技术的顶点'
@@ -242,7 +245,7 @@ Items: {
 	}
 
 	ParagonPlate: {
-		DisplayName: 无暇胸甲
+		DisplayName: 无瑕胸甲
 		Tooltip:
 			'''
 			增加 20 最大魔力值
@@ -250,6 +253,7 @@ Items: {
 			增加 10% 暴击率
 			减少 5% 魔力消耗
 			5% 的几率不消耗弹药
+			增加 5% 投掷物速度
 			增加 1 召唤栏
 			大幅提高生命再生速率
 			'巧匠技术的顶点'
@@ -257,7 +261,7 @@ Items: {
 	}
 
 	ParagonLeggings: {
-		DisplayName: 无暇护胫
+		DisplayName: 无瑕护胫
 		Tooltip:
 			'''
 			增加 20 最大魔力值
@@ -265,6 +269,7 @@ Items: {
 			增加 8% 暴击率
 			减少 5% 魔力消耗
 			5% 的几率不消耗弹药
+			增加 5% 投掷物速度
 			增加 1 召唤栏
 			增加 25% 移动速度和加速度
 			'巧匠技术的顶点'
@@ -353,7 +358,7 @@ Buffs: {
 
 	ElectrifiedEnemy2: {
 		DisplayName: 过载电击
-		Description: 敌人被过载的电流能量所困扰，持续受到伤害The enemy is overloaded with galvanic energy and taking constant damage
+		Description: 敌人被过载的电流能量所困扰，持续受到伤害
 	}
 
 	ManaStim5: {
@@ -391,3 +396,5 @@ Projectiles: {
 	ClimaxDeathray.DisplayName: 终⊙焉催化剂
 	ClimaxBeam.DisplayName: 终⊙焉催化剂
 }
+
+
