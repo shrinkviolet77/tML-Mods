@@ -22,6 +22,14 @@ Projectiles: {
 	MinionFire.DisplayName: 咒火
 	BloodOrbital.DisplayName: 血腥卫核
 	DefiledSpikeProj.DisplayName: 绝命刺
+	CoSFire.DisplayName: 腐蚀烈焰
+	CoSBomb.DisplayName: 暗夜炸弹
+	CoSBlast.DisplayName: 暗影冲击
+	CoSCutter.DisplayName: 放射利刃
+	WispHeal.DisplayName: 灵魂治愈
+	UmbralDeathray.DisplayName: 本影射线
+	RingOrbitalSoul.DisplayName: 灵魂卫核
+	CorePetSoul.DisplayName: 灵魂本影
 }
 
 NPCs: {
@@ -34,6 +42,76 @@ NPCs: {
 	ShadeWisp.DisplayName: 影灵
 	SpawnerOrbCrim.DisplayName: 可疑的球体
 	SpawnerOrb.DisplayName: 可疑的球体
+
+	###
+	# Core of Shadows update
+	###
+	SusOrbital: {
+		DisplayName: 腐化卫核
+		CrimsonName: 猩红卫核
+	}
+
+	SusOrb.DisplayName: 可疑的球体
+
+	CoSBoss: {
+		DisplayName: 暗影核心
+		JokeName: 永恒本影
+		SuperbossName: 灵魂本影
+		 SuperbossBestiary:
+			'''
+			远古的光明与黑暗之魂无情的维持着平衡。
+			然而，灵魂本就是由纯粹的光明和黑暗化成，本身就会破坏他们为之奋斗的平衡。
+			或许他们互相毁灭或被外来者摧毁也是创始神设计好的一部分。
+			...但化为概念的事物真的能被杀死吗?
+			''' 
+		 ChecklistTip:
+			'''
+			使用在腐化/猩红之地，或是夜晚使用[i:CorruptionBoss/ChargedOrbCoS]黄昏宝珠
+			夜晚召唤会激怒BOSS，战斗更加困难
+			''' 
+	}
+
+	ShadowOrbital: {
+		DisplayName: 暗影卫核
+		JokeName: 阴影护卫
+		SuperbossName: 本影珠
+		 SuperbossBestiary:
+			'''
+			击碎暗影珠会激起世界吞噬者的怒火，看样子它们对腐化之地有着神秘的重要性。
+			或许它们是世界邪恶的源头、渠道或是聚合体。
+			''' 
+	}
+
+	ChaosOrbital: {
+		DisplayName: 混沌卫核
+		JokeName: 幻影护卫
+		SuperbossName: 灵魂珠
+		 SuperbossBestiary:
+			'''
+			黑暗之魂用暗影珠释放出可怕的破坏力，在之后只留下一个破碎的外壳。
+			那么，有多少能量来自黑暗之魂，有多少来自暗影珠呢?
+			''' 
+	}
+
+	CoFBoss: {
+		DisplayName: 恐惧皇冠
+		JokeName: 总督皇冠
+		SuperbossName: 皇冠之魂
+		 Bestiary:
+			'''
+			失去统治者的恐怖皇冠。 
+			这种燃烧的异常形态是对领袖和权威概念的邪恶讽刺。世界的邪恶是一种不可控制的力量，不会接受任何主人。
+			''' 
+		 SuperbossBestiary:
+			'''
+			在一个理想的世界里，一切都是公平公正的，没有一个生物会凌驾于另一个之上。 
+			只有自由才能实行。
+			灵魂将主宰自己。
+			那是...安那其。
+			''' 
+	}
+
+	CoSWisp.DisplayName: 影灵
 }
 
 CommonItemTooltip: {
@@ -58,29 +136,45 @@ CommonItemTooltip: {
 		增益:
 		免疫诅咒狱火
 		提升少量防御
-		''' 
+		'''
 	EquipPerksTipCrim:
 		'''
 		增益:
 		免疫灵液
 		提升少量生命恢复
-		''' 
+		'''
 	EquipPerksTipMulti:
 		'''
 		增益:
 		免疫诅咒狱火与灵液
 		提升少量防御与生命恢复
-		''' 
+		'''
 }
 
 Items: {
+	ChargedOrbCoS: {
+		DisplayName: 黄昏宝珠
+		 Tooltip:
+			'''
+			召唤暗影核心
+			'在黑夜和邪恶之地会产生剧烈反应'
+			''' 
+		 DisabledTip:
+			'''
+			注意: 这个物品不能用于召唤腐化/猩红核心!
+			请将其合成为充能宝珠
+			''' 
+		EnrageWarn: "[c/AF4BFF:'夜晚的黑暗涌入其中，散发着充满恶意的能量...使用时后果自负。']"
+		CraftCond: 关闭怀旧模式
+	}
+
 	ChargedOrbCrim: {
 		DisplayName: 充能宝珠
 		Tooltip:
 			'''
 			召唤猩红核心
 			{$CommonItemTooltip.MechdusaSummonNotDuringEverything}
-			''' 
+			'''
 	}
 
 	ChargedOrb: {
@@ -89,25 +183,31 @@ Items: {
 			'''
 			召唤腐化核心
 			{$CommonItemTooltip.MechdusaSummonNotDuringEverything}
+			'''
+		 DisabledTip:
+			'''
+			注意: 这个物品不能用于召唤暗影核心!
+			请将其合成为黄昏宝珠
 			''' 
+		CraftCond: 开启怀旧模式
 	}
 
 	CrimsonShard: {
-		DisplayName: Crimson Shard
+		DisplayName: 猩红碎片
 		Tooltip:
 			'''
 			可以在强大灵魂的催化下拼凑起来
 			'看着像一坨白花花的烂肉...哕...'
-			''' 
+			'''
 	}
 
 	ShadowShard: {
-		DisplayName: Shadow Shard
+		DisplayName: 暗影碎片
 		Tooltip:
 			'''
 			可以在强大灵魂的催化下拼凑起来
 			'它邪恶的光芒中蕴含着诡异的力量...'
-			''' 
+			'''
 	}
 
 	CoreMaskCrim: {
@@ -151,7 +251,7 @@ Items: {
 			'''
 			召唤一个能照明的微型腐化核心
 			'但不是已经有人为你而战了吗?'
-			''' 
+			'''
 	}
 
 	CorePetItemCrim: {
@@ -160,7 +260,7 @@ Items: {
 			'''
 			召唤一个能照明的微型猩红核心
 			'想象一下，你不是腐化核心享受者...'
-			''' 
+			'''
 	}
 
 	MultiPetItem: {
@@ -168,8 +268,8 @@ Items: {
 		Tooltip:
 			'''
 			召唤迷你腐化核心和迷你猩红核心
-			'两世愿望，一次满足?'
-			''' 
+			'两个愿望，一次满足?'
+			'''
 	}
 
 	CursedCarbine: {
@@ -178,7 +278,7 @@ Items: {
 			'''
 			将毒镖、水晶镖、诅咒镖转化为它们的强化版本
 			'火枪 3.0?'
-			''' 
+			'''
 	}
 
 	CrimIron: {
@@ -187,7 +287,7 @@ Items: {
 			'''
 			暴击时吸取生命
 			'快枪手射杀了歹徒，全剧终'
-			''' 
+			'''
 	}
 
 	GoreGuanado: {
@@ -208,7 +308,7 @@ Items: {
 			减少魔力再生延迟
 			暴击有50%几率消耗魔力产生造成额外伤害的爆炸
 			魔力使用量随魔力消耗降低效果和武器的攻击速度和暴击几率变化
-			''' 
+			'''
 	}
 
 	Heartbreak: {
@@ -220,7 +320,7 @@ Items: {
 			受伤时抛出爆炸碎片
 			受伤后增加移动速度
 			'回味伤悲不如快意恩仇'
-			''' 
+			'''
 	}
 
 	CrystallineUmbra: {
@@ -233,7 +333,7 @@ Items: {
 			暴击有50%几率消耗魔力产生造成额外伤害的爆炸
 			魔力使用量随魔力消耗降低效果和武器的攻击速度和暴击几率变化
 			'他们永远不会知道它的到来'
-			''' 
+			'''
 	}
 
 	ShatteredShell: {
@@ -244,7 +344,7 @@ Items: {
 			能将伤害反弹给攻击者
 			受伤时抛出爆炸碎片
 			'它不会阻止敌人攻击你，但能让敌人后悔攻击你'
-			''' 
+			'''
 	}
 
 	ShatterspikeBracer: {
@@ -256,7 +356,7 @@ Items: {
 			受伤时抛出爆炸碎片
 			敌人更可能以你为目标
 			'最好的防守，就是最好的进攻加上最好的防守'
-			''' 
+			'''
 	}
 
 	SiphonStone: {
@@ -268,7 +368,7 @@ Items: {
 			大幅减少魔力再生延迟
 			暴击有50%几率消耗魔力产生造成额外伤害的爆炸
 			魔力使用量随魔力消耗降低效果和武器的攻击速度和暴击几率变化
-			''' 
+			'''
 	}
 
 	ShadowRing: {
@@ -280,7 +380,7 @@ Items: {
 			卫核会受到敌人的伤害，伤害到达一定值后卫核会暂时破碎
 			卫核受到的射弹伤害降低
 			'尽管采用了极简主义的设计，但其优雅的外观仍具有强大的力量'
-			''' 
+			'''
 	}
 
 	BloodyRing: {
@@ -292,7 +392,7 @@ Items: {
 			卫核会受到敌人的伤害，伤害到达一定值后卫核会暂时破碎
 			卫核受到的射弹伤害降低
 			'这可不是时尚展示'
-			''' 
+			'''
 	}
 
 	TaintedTrajectory: {
@@ -302,7 +402,7 @@ Items: {
 			6% 召唤标记暴击率
 			你的召唤物将集中攻击被打中的敌人
 			击中敌人会在鞭子末端释放污秽的灵魂
-			''' 
+			'''
 	}
 
 	OrbitalStaff: {
@@ -312,7 +412,7 @@ Items: {
 			召唤微型腐化核心为你而战
 			反复召唤给核心添加更多的卫核
 			'该法杖由腐化团队赞助'
-			''' 
+			'''
 	}
 
 	Bloodlust: {
@@ -323,7 +423,7 @@ Items: {
 			光环根据伤害增加玩家的生命回复
 			按住攻击键时血珠受到强化
 			'你知道只有一件事是真的'
-			''' 
+			'''
 	}
 
 	DefiledSpike: {
@@ -333,6 +433,81 @@ Items: {
 			释放绝命刺
 			按住攻击键蓄能，释放更强大的绝命刺
 			在攻击开始时造成额外伤害
+			'''
+	}
+
+	SoulRing: {
+		DisplayName: 灵魂戒指
+		 Tooltip:
+			'''
+			召唤6个灵魂卫核保护你并提高防御
+			卫核能对接触的敌人造成伤害，并对敌人发出射弹
+			卫核会受到敌人的伤害，伤害到达一定值后卫核会暂时破碎
+			卫核受到的射弹伤害降低
+			'奇怪的是，尽管它由强大的灵魂能量组成，但它并不比类似的戒指更强。'
+			''' 
+	}
+
+	CoreTrophyItemSoul: {
+		DisplayName: 灵魂本影纪念章
+		Tooltip: ""
+	}
+
+	CorePetItemSoul: {
+		DisplayName: 本影核
+		 Tooltip:
+			'''
+			召唤一个能照明的微型灵魂本影
+			'尽管处于一种衰弱的状态，灵魂依然存在。'
+			''' 
+	}
+
+	CoreMaskSoul: {
+		DisplayName: 灵魂本影面具
+		Tooltip: ""
+	}
+
+	CoreBossBagSoul: {
+		DisplayName: 宝藏袋(皇冠之魂)
+		Tooltip: ""
+	}
+
+	CrownOfFearSoul: {
+		DisplayName: 灵魂皇冠
+		 Tooltip:
+			'''
+			所有攻击造成暗影撕裂减益，快速损耗生命
+			暗影撕裂会一直持续，直到造成了相当于攻击伤害20%的伤害
+			连续攻击能延长暗影撕裂的持续时间
+			免疫诅咒狱火和灵液
+			可以作为头盔佩戴，增加大量防御
+			'你现在是一位在战斗的熔炉中加冕的大师'
+			''' 
+	}
+
+	CrownOfFearCrim: {
+		DisplayName: 恐惧皇冠
+		 Tooltip:
+			'''
+			所有攻击造成暗影撕裂减益，快速损耗生命
+			暗影撕裂会一直持续，直到造成了相当于攻击伤害20%的伤害
+			连续攻击能延长暗影撕裂的持续时间
+			免疫诅咒狱火和灵液
+			可以作为头盔佩戴，增加大量防御
+			'恐惧的王冠现在获得了统治者'
+			''' 
+	}
+
+	CrownOfFear: {
+		DisplayName: 恐惧皇冠
+		 Tooltip:
+			'''
+			所有攻击造成暗影撕裂减益，快速损耗生命
+			暗影撕裂会一直持续，直到造成了相当于攻击伤害20%的伤害
+			连续攻击能延长暗影撕裂的持续时间
+			免疫诅咒狱火和灵液
+			可以作为头盔佩戴，增加大量防御
+			'暗影大师，恐惧之主'
 			''' 
 	}
 }
@@ -367,6 +542,26 @@ Buffs: {
 		DisplayName: 嗜血
 		Description: 增加生命再生
 	}
+
+	ShadowTear: {
+		DisplayName: 暗影撕裂
+		Description: 快速失去生命
+	}
+
+	Dread: {
+		DisplayName: 恐惧
+		Description: 你见证了真正可怕的力量，无法逃脱。
+	}
+
+	UmbralOppresion: {
+		DisplayName: 本影压迫
+		Description: 核心纯粹的阴暗淹没了光，阻止生命再生和生命吸取
+	}
+
+	CorePetBuffSoul: {
+		DisplayName: 本影慈爱
+		Description: 核心纯粹而朦胧的力量...此版本中不存在
+	}
 }
 
 Configs: {
@@ -382,10 +577,10 @@ Configs: {
 			Label: 核心生命倍率
 			Tooltip:
 				'''
-				腐化核心与猩红核心血量的倍率
+				BOSS血量的倍率
 				也会影响卫核的血量，不影响影灵
 				如果觉得核心战太难或太简单，可以调整该项.
-				''' 
+				'''
 		}
 
 		wispHealthMultiplier: {
@@ -394,48 +589,49 @@ Configs: {
 				'''
 				核心召唤的影灵血量的倍率
 				如果觉得核心战太难或太简单，可以调整该项.
-				''' 
+				'''
 		}
 
 		bossDefenseMultiplier: {
 			Label: 核心防御倍率
 			Tooltip:
 				'''
-				腐化核心与猩红核心防御的倍率
+				BOSS防御的倍率
 				也会影响卫核和影灵
 				如果觉得核心战太难或太简单，可以调整该项.
-				''' 
+				'''
 		}
 
 		bossDamageMultiplier: {
 			Label: 核心伤害倍率
 			Tooltip:
 				'''
-				腐化核心与猩红核心伤害的倍率
+				BOSS伤害的倍率
 				也会影响卫核和影灵,以及所有相关射弹
 				如果觉得核心战太难或太简单，可以调整该项.
-				''' 
+				'''
 		}
 
 		attackVelocityMultiplier: {
 			Label: 核心弹速倍率
 			Tooltip:
 				'''
-				腐化核心与猩红核心发射的射弹速度的倍率
+				BOSS发射的射弹速度的倍率
 				也会影响卫核发射的射弹和影灵的移速
-				还能改变影灵和暗夜炸弹的转向速度
+				还能改变影灵和怀旧模式的暗夜炸弹的转向速度
 				如果觉得核心战太难或太简单，可以调整该项.
-				''' 
+				'''
 		}
 
 		bossSpeedMultiplier: {
-			Label: 核心速度倍率
+			Label: 核心速度倍率（怀旧模式）
 			Tooltip:
 				'''
 				腐化核心与猩红核心速度的倍率
 				同时调整核心的惯性，这决定了核心转弯的速度和幅度
 				如果觉得核心战太难或太简单，可以调整该项.
-				''' 
+				只对怀旧模式的BOSS有效，暗影核心不受影响
+				'''
 		}
 
 		rangedWepDmgMultiplier: {
@@ -446,7 +642,7 @@ Configs: {
 				对其他武器无效
 				猩红铁炮的生命吸取不与伤害成正比增加
 				用于手动平衡武器的强度（可与BOSS倍率配合调整BOSS时期）
-				''' 
+				'''
 		}
 
 		meleeWepDmgMultiplier: {
@@ -456,7 +652,7 @@ Configs: {
 				惩戒之核与血腥偃月刀伤害的倍率
 				对其他武器无效
 				用于手动平衡武器的强度（可与BOSS倍率配合调整BOSS时期）
-				''' 
+				'''
 		}
 
 		magicWepDmgMultiplier: {
@@ -467,7 +663,7 @@ Configs: {
 				对其他武器无效
 				嗜血的生命回复效果不会改变
 				用于手动平衡武器的强度（可与BOSS倍率配合调整BOSS时期）
-				''' 
+				'''
 		}
 
 		summonWepDmgMultiplier: {
@@ -480,6 +676,38 @@ Configs: {
 				卫核法杖的仆从需要重新召唤更新其伤害
 				用于手动平衡武器的强度（可与BOSS倍率配合调整BOSS时期）
 				召唤武器往往随着伤害的增加而指数级增强，因此建议将倍率设置得低于其他武器
+				'''
+		}
+
+		forcedAI: {
+			Label: AI难度
+			 Tooltip:
+				'''
+				允许你设置暗影核心的AI难度。选项如下;
+				- 默认: AI由世界难度决定
+				- 经典: 使用经典难度的AI
+				- 专家: 使用专家难度的AI
+				- EX: 攻击比专家难度的AI更强大，在正常情况下不会出现
+				怀旧模式下无效!
+				''' 
+		}
+
+		legacyMode: {
+			Label: 怀旧模式
+			 Tooltip:
+				'''
+				由之前版本的腐化核心替代暗影核心
+				注意，可疑的球体被击碎时会直接生成腐化核心
+				''' 
+		}
+
+		orbResistedProjs: {
+			Label: 卫核射弹抗性
+			 Tooltip:
+				'''
+				下列射弹对卫核的伤害减半,包括哨兵
+				这是为了降低滞留型范围伤害对卫核的突出效果
+				只影响暗影核心BOSS战，怀旧模式下无效!
 				''' 
 		}
 	}
