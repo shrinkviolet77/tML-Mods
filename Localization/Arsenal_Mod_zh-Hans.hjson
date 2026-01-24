@@ -377,6 +377,16 @@ Mods: {
 				DisplayName: 恒星起源
 				Description: 恒星为你而战!
 			}
+
+			StarstrikeBuff: {
+				DisplayName: 霓虹星际战斗机
+				Description: 可疑飞船为你而战!
+			}
+
+			StarstrikeBuff2: {
+				DisplayName: 星际强击机
+				Description: 霓虹飞船为你而战!
+			}
 		}
 
 		Items: {
@@ -500,11 +510,11 @@ Mods: {
 				DisplayName: 烈焰轮盘
 				Tooltip:
 					'''
-					
+
 					'这些轮盘真够火的!'
 					'''
-				 TooltipNormal: 返回前可穿透 1 个敌人
-				 TooltipRemix: 穿透敌人而不是在命中后返回
+				TooltipNormal: 返回前可穿透 1 个敌人
+				TooltipRemix: 穿透敌人而不是在命中后返回
 			}
 
 			ChlorothornChakram: {
@@ -612,21 +622,21 @@ Mods: {
 				DisplayName: 能量连弩
 				Tooltip:
 					'''
-					
+
 					'箭矢的新时代到来了!'
 					'''
-				 TooltipNormal:
+				TooltipNormal:
 					'''
 					将木箭转化为充能箭
 					连续发射五根箭
 					只有第一轮消耗弹药
-					''' 
-				 TooltipRemix:
+					'''
+				TooltipRemix:
 					'''
 					将木箭转化为充能箭
 					连续发射三根箭
 					只有第一轮消耗弹药
-					''' 
+					'''
 			}
 
 			Junglefury: {
@@ -641,13 +651,13 @@ Mods: {
 
 			MechanizedBow: {
 				DisplayName: 机械弓
-				Tooltip: 
-				 TooltipNormal: 随使用时间增加射速
-				 TooltipRemix:
+				Tooltip: 占位
+				TooltipNormal: 随使用时间增加射速
+				TooltipRemix:
 					'''
 					随使用时间增加射速
 					50%几率不消耗弹药
-					''' 
+					'''
 			}
 
 			Mooncrescent: {
@@ -2389,6 +2399,7 @@ Mods: {
 					你的召唤物将集中攻击被标记的敌人
 					敌人可能会被锁链绑定
 					召唤物的攻击会传递给锁链绑定的敌人
+					'火焰风暴二代?'
 					'''
 			}
 
@@ -2451,12 +2462,12 @@ Mods: {
 				DisplayName: 报废抓钩
 				Tooltip:
 					'''
-					
+
 					你的召唤物将集中攻击被标记的敌人
 					攻击敌人以发出电火花
 					'''
-				 TooltipNormal: 5 召唤标记伤害
-				 TooltipRemix: 21 召唤标记伤害
+				TooltipNormal: 5 召唤标记伤害
+				TooltipRemix: 21 召唤标记伤害
 			}
 
 			SeaScourge: {
@@ -3474,19 +3485,19 @@ Mods: {
 				DisplayName: 充电线
 				Tooltip:
 					'''
-					
+
 					你的召唤物将集中攻击被标记的敌人
 					'''
-				 TooltipNormal:
+				TooltipNormal:
 					'''
 					6 召唤标记伤害
 					召唤标记能叠加 5 次
-					''' 
-				 TooltipRemix:
+					'''
+				TooltipRemix:
 					'''
 					2 召唤标记伤害
 					召唤标记能叠加 4 次
-					''' 
+					'''
 			}
 
 			EnergizedStaff: {
@@ -3645,6 +3656,78 @@ Mods: {
 					'这一天可能已经结束了...
 					...但另一个辉煌的时刻就在地平线上等待着!'
 					'''
+			}
+
+			Antipode: {
+				DisplayName: 对立面
+				 Tooltip:
+					'''
+					交替投掷红色回旋镖和蓝色回旋镖
+					如果两者同时飞行，它们会相互吸引
+					碰撞后，回旋镖将释放出元素爆炸，然后返回
+					'异性相吸'
+					''' 
+			}
+
+			ShindigBeater: {
+				DisplayName: 狂欢球棒
+				 Tooltip:
+					'''
+					两次挥舞间存在延迟
+					暴击为本垒打，造成巨量伤害
+					'凯西出击'
+					''' 
+			}
+
+			Wonderbuss: {
+				DisplayName: 奇迹喇叭枪
+				 Tooltip:
+					'''
+					射出一片随机种类的子弹
+					'全射出去!'
+					''' 
+			}
+
+			Blundershot: {
+				DisplayName: 掉链枪
+				 Tooltip:
+					'''
+					发射一片子弹
+					每发命中造成的伤害浮动很大
+					'靠不住的东西'
+					''' 
+			}
+
+			Dreamcatcher: {
+				DisplayName: 捕梦网
+				 Tooltip:
+					'''
+					生成一段时间后造成区域伤害的捕梦网
+					造成伤害能恢复一些魔力值
+					''' 
+			}
+
+			Waterspout: {
+				DisplayName: 水旋风
+				Tooltip: 在地面上形成一个小型间歇泉
+			}
+
+			StrangeController: {
+				DisplayName: 可疑手柄
+				 Tooltip:
+					'''
+					召唤一架可疑的霓虹星际战斗机为你而战
+					多次召唤强化召唤物能力
+					''' 
+			}
+
+			NeonController: {
+				DisplayName: 霓虹手柄
+				 Tooltip:
+					'''
+					召唤一架星际强击机为你而战
+					多次召唤强化召唤物能力
+					''' 
 			}
 		}
 
@@ -4203,6 +4286,18 @@ Mods: {
 			DarklightThrust.DisplayName: 暗光突刺
 			SabrewingThrown.DisplayName: 翼刃
 			SabrewingBattlestaff.DisplayName: 翼刃
+			AntipodeBlast.DisplayName: 对立炸弹
+			AntipodeProjB.DisplayName: 对立冰旋镖
+			AntipodeProjR.DisplayName: 对立火旋镖
+			DreamcatcherProjectile.DisplayName: 捕梦网
+			WaterspoutProjectile.DisplayName: 水旋风
+			StarstrikeMinion.DisplayName: 霓虹星际战斗机
+			StarstrikeSeeker.DisplayName: 歼星追踪弹
+			StarstrikePlasma.DisplayName: 歼星等离子
+			StarstrikeMissile.DisplayName: 歼星导弹
+			StarstrikeBeam.DisplayName: 歼星光束
+			StarstrikeMinion2.DisplayName: 星际强击机
+			SMissileLauncher.DisplayName: 歼星导弹
 		}
 
 		Configs: {
@@ -4299,8 +4394,8 @@ Mods: {
 				}
 
 				AllowRemixSwaps: {
-					 Label: 颠倒世界武器互换
-					 Tooltip:
+					Label: 颠倒世界武器互换
+					Tooltip:
 						'''
 						确定某些阿森纳武器是否在颠倒世界中发生属性与来源互换
 						'默认'表示只在颠倒与天顶世界生效
@@ -4310,8 +4405,18 @@ Mods: {
 						注意:tML尚未正确支持物品变体，因此目前武器互换不会影响武器价格
 						预计交换的武器在获得时会非常便宜/昂贵！
 
-						虽然这个设置可以随时更改，但很明显，它不会影响世界生成后的宝箱战利品
-						此外，与互换武器相关的物品的稀有度和微光变体在离开世界再重新加入之前不会更新
+						如果出现任何与交换相关的bug，也不要感到惊讶。
+						'''
+				}
+
+				zenithStones: {
+					Label: 天顶武器额外材料
+					 Tooltip:
+						'''
+						添加到此列表中的物品将添加到终末弓,最终分形,巅峰鞭的合成材料中(不包括天顶剑本身)
+						每个条目对应的数字代表所添加物品的所需数量
+						有些模组为天顶剑添加了进度锁，你可以用这个设置进行同步修改
+						对阿森纳投手拓展的究极手里剑和阿森纳捕猎碟拓展的顶点碟也生效
 						''' 
 				}
 			}
