@@ -1192,7 +1192,7 @@ Mods: {
 			}
 
 			CoolingCell: {
-				DisplayName: 低温冷却细胞
+				DisplayName: 低温冷却电池
 				Tooltip:
 					'''
 					{$CommonItemtooltip.ForItems.ReducedAbilityCooldown}
