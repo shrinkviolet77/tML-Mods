@@ -67,7 +67,7 @@ Mods: {
 			}
 
 			Clicker: {
-				IncClickRadius: 直接{0}基础点击半径
+				IncClickRadius: 基础点击半径增加{0}
 				CheaperEffect: 点击特效所需点击数减少{0}
 			}
 
