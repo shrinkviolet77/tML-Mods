@@ -780,7 +780,7 @@ Mods: {
 				DisplayName: 魔力充能器
 				Tooltip:
 					'''
-					{$CommonItemtooltip.ForItems.ActivatedAbility}充能10秒后回复150生命值
+					{$CommonItemtooltip.ForItems.ActivatedAbility}充能10秒后回复150魔力值
 					受到伤害会打断充能，无法回复魔力
 					[placeholder]
 					'''
